@@ -7,6 +7,10 @@
 - Generated Lua data modules from JSON sheets.
 - Preflight checks for blank cells and unresolved sheet references.
 
+## v0.1 scope
+- Solo-only.
+- Multiplayer/co-op is deferred and must not be advertised by the v0.1 listing or Melty recipe.
+
 ## Not yet verified in Ready or Not
 - Exact Ready or Not UObject/class/function names.
 - Player tick/damage hooks.
@@ -14,6 +18,5 @@
 - Infected actor spawning/AI replacement.
 - HUD presentation.
 - Persistence between actual missions.
-- Solo/co-op replication behavior.
 
 These are intentionally not guessed. They require inspection of the installed Ready or Not build and UE4SS bindings.
