@@ -17,10 +17,14 @@ jobs:
 
       - name: Build release ZIP
         run: |
-          zip -r SurvivalZomboid-v0.1-foundation.zip README.md docs sheets src generate.py preflight.py test_model.py
+          zip -r SurvivalZomboid-v0.1.1.zip README.md docs sheets src generate.py preflight.py test_model.py
 
-      - name: Attach ZIP to v0.1 release
+      - name: Create or update v0.1.1 release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release upload Test SurvivalZomboid-v0.1-foundation.zip --clobber
+          if ! gh release view v0.1.1 >/dev/null 2>&1; then
+            gh release create v0.1.1 SurvivalZomboid-v0.1.1.zip --title "v0.1.1" --notes "Single-player v0.1.1 package for Melty."
+          else
+            gh release upload v0.1.1 SurvivalZomboid-v0.1.1.zip --clobber
+          fi
