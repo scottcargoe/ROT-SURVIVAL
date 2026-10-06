@@ -27,7 +27,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if ! gh release view v0.1.2 >/dev/null 2>&1; then
-            gh release create v0.1.2 SurvivalZomboid-v0.1.2.zip --title "v0.1.2" --notes "Single-player UE4SS package without README.md."
-          else
-            gh release upload v0.1.2 SurvivalZomboid-v0.1.2.zip --clobber
+            gh release create v0.1.2 --title "v0.1.2" --notes "Single-player UE4SS package without README.md."
           fi
+          gh release upload v0.1.2 SurvivalZomboid-v0.1.2.zip --clobber
