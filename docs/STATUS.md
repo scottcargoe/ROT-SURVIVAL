@@ -8,8 +8,7 @@
 - Preflight checks for blank cells and unresolved sheet references.
 
 ## v0.1 scope
-- Solo-only.
-- Multiplayer/co-op is deferred and must not be advertised by the v0.1 listing or Melty recipe.
+- Single-player survival prototype.
 
 ## Not yet verified in Ready or Not
 - Exact Ready or Not UObject/class/function names.
